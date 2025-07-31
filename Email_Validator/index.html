@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="w-full bg-black text-white">
+      <nav
+        class="w-full flex items-center justify-between sm:py-5 sm:px-5 py-3 px-0"
+      >
+        <h4
+          class="font-medium sm:text-xxl flex items-center space-x-1 sm:text-sm text-xs"
+        >
+          <img
+            src="email_svg.svg"
+            alt=""
+            class="h-6"
+            style="filter: invert(1)"
+          />
+          <span class="text-blue-700 sm:text-sm text-xs">i</span>
+          _Validate
+        </h4>
+
+        <ul class="flex items-center space-x-4 capitalize list-none">
+          <li class="hover:text-gray-400"><a href="#">home</a></li>
+          <li class="hover:text-gray-400"><a href="#">about</a></li>
+          <li class="hover:text-gray-400"><a href="#">contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex items-center justify-center flex-col capitalize sm:px-5">
+      <div class="wrapper my-5">
+        <h4 class="text-3xl">enter your credentials here</h4>
+        <form action="/submit" method="post">
+          <label for="username">E-mail</label>
+          <input
+            id="username"
+            class="px-5 w-72 ml-3 my-3 py-2 placeholder:text-xs border-black"
+            type="email"
+            placeholder="E-mail"
+          />
+          <br />
+
+          <!-- <br>
+                    gender 
+                    
+                    <input type="radio">
+                    <label for="gender">male</label>
+                    
+                    <input type="radio">
+                    <label for="gender">female</label> -->
+          <br />
+          <input
+            class="mt-4 py-2 px-6 cursor-pointer text-xs text-white bg-black hover:bg-white hover:text-black"
+            type="submit"
+            class="btn"
+            value="submit"
+            id="submit-btn"
+          />
+        </form>
+      </div>
+
+      <div class="">
+        <h1 class="capitalize text-3xl">your results</h1>
+        <div id="result-Container" class="h-56"></div>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
